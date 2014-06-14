@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
-});
+app.use(express.static(__dirname));
+app.use(app.router);
+
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
