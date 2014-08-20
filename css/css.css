@@ -1,0 +1,88 @@
+
+@font-face{
+    font-family: Adobe Garamond Pro;
+    src: url("/fonts/garamond.ttf");
+
+}
+
+html, body{
+    height:100%;
+}
+body{
+
+    margin: 0px;
+
+}
+
+li, .menulink {
+
+    list-style: none;
+    margin-top: 20px; 
+    text-decoration: none;
+
+}
+
+#sidebar{
+
+    width: 200px;
+    height: 100%;
+    border-left: 1px solid black;
+    margin-left: 30px;
+    position: fixed;
+}
+
+
+#picture{
+
+    margin-top: 50px;
+    margin-left: 15px;
+
+}
+
+#navigation{
+
+    margin-top: 35px;
+
+}
+
+.menulink{
+
+    font-size: 1.4em;
+    font-family: "Adobe Garamond Pro";
+    color: black;
+}
+
+#content{
+
+    width: 600px;
+    height: 100%;
+    margin-left: 300px;
+
+}
+
+#maincontent{
+
+    width: 400px;
+    text-align: justify;
+    font-family: Adobe Garamond Pro;
+    border-right: 1px solid black;
+    display: inline-block;
+    padding-right: 25px;
+    
+}
+
+#sidecontent{
+
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    font-style: italic;
+    font-family: Adobe Garamond Pro;
+}
+
+
+
+
+
+
+
