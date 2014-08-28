@@ -8,6 +8,7 @@
 html, body{
     height:100%;
 }
+
 body{
 
     margin: 0px;
@@ -67,6 +68,13 @@ body{
     display: inline-block;
     padding-right: 25px;
     
+}
+
+.mainimg{
+
+    width: 400px;
+    margin-top: 15px;
+
 }
 
 #sidecontent{
