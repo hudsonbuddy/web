@@ -1,0 +1,293 @@
+#maincontent{
+    font-family: monospace;
+}
+
+body {
+    counter-reset: scenecountl scenecountr shotcount charcount pages 1;
+}
+
+.sceneheading {
+    counter-reset: shotcount;
+}
+
+@media print {
+    body {
+        line-height: 1;
+    }
+
+}
+
+@media screen {
+    span.camera, span.lights, span.electrics, span.opticalfx {
+        color: rgb(51, 153, 0);
+    }
+
+    span.music, span.sound, span.soundfx {
+        color: rgb(102, 51, 0);
+    }
+
+    span.cgi, span.construction, span.painting, span.set, span.setdressing, span.specialfx {
+        color: rgb(0, 51, 204);
+    }
+
+    span.hair, span.makeup, span.props, span.wardrobe, span.weapons {
+        color: rgb(153, 0, 255);
+    }
+
+    span.equip, span.mechfx, span.stunts {
+        color: rgb(255, 102, 0);
+    }
+
+    span.animals, span.equip, span.greenery, span.handler, span.livestock, span.misc, span.vehicles {
+        color: rgb(255, 51, 255);
+    }
+
+    span.actor, span.cast, span.crew, span.extras {
+        color: rgb(255, 0, 0);
+    }
+
+    span.addlabour, span.location, span.prodnotes, span.security {
+        color: rgb(238, 187, 0);
+    }
+
+    [active="true"] {
+        background: yellow none repeat scroll 0% 0%; color: black; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;
+    }
+
+    span[token="true"] {
+        background-image: url(chrome://celtx/skin/token.png); background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; margin-right: 2px; padding-left: 10px; -moz-user-select: text;
+    }
+
+    span.note, span.media {
+        background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; padding-left: 10px; z-index: 1; position: relative; top: -8px; left: -8px; margin-right: -10px; -moz-user-select: all;
+    }
+
+    span.note {
+        background-image: url(chrome://celtx/skin/note.png); background-color: rgb(253, 247, 161);
+    }
+
+    span.media {
+        background-image: url(chrome://celtx/skin/picture.png);
+    }
+
+}
+
+body[showrevisionmarks="false"] span[revision], body[showrevisionmarks="1"] span[revision]:not([revision~="1"]), body[showrevisionmarks="2"] span[revision]:not([revision~="2"]), body[showrevisionmarks="3"] span[revision]:not([revision~="3"]), body[showrevisionmarks="4"] span[revision]:not([revision~="4"]), body[showrevisionmarks="5"] span[revision]:not([revision~="5"]), body[showrevisionmarks="6"] span[revision]:not([revision~="6"]), body[showrevisionmarks="7"] span[revision]:not([revision~="7"]), body[showrevisionmarks="8"] span[revision]:not([revision~="8"]), body[showrevisionmarks="9"] span[revision]:not([revision~="9"]), body[showrevisionmarks="10"] span[revision]:not([revision~="10"]), body[showrevisionmarks="11"] span[revision]:not([revision~="11"]), body[showrevisionmarks="12"] span[revision]:not([revision~="12"]), body[showrevisionmarks="13"] span[revision]:not([revision~="13"]), body[showrevisionmarks="14"] span[revision]:not([revision~="14"]), body[showrevisionmarks="15"] span[revision]:not([revision~="15"]), body[showrevisionmarks="16"] span[revision]:not([revision~="16"]), body[showrevisionmarks="17"] span[revision]:not([revision~="17"]), body[showrevisionmarks="18"] span[revision]:not([revision~="18"]), body[showrevisionmarks="19"] span[revision]:not([revision~="19"]), body[showrevisionmarks="20"] span[revision]:not([revision~="20"]), body[showrevisionmarks="21"] span[revision]:not([revision~="21"]), body[showrevisionmarks="22"] span[revision]:not([revision~="22"]), body[showrevisionmarks="23"] span[revision]:not([revision~="23"]), body[showrevisionmarks="24"] span[revision]:not([revision~="24"]), body[showrevisionmarks="25"] span[revision]:not([revision~="25"]), body[showrevisionmarks="26"] span[revision]:not([revision~="26"]), body[showrevisionmarks="27"] span[revision]:not([revision~="27"]), body[showrevisionmarks="28"] span[revision]:not([revision~="28"]), body[showrevisionmarks="29"] span[revision]:not([revision~="29"]), body[showrevisionmarks="30"] span[revision]:not([revision~="30"]), body[showrevisionmarks="31"] span[revision]:not([revision~="31"]), body[showrevisionmarks="32"] span[revision]:not([revision~="32"]), body[showrevisionmarks="33"] span[revision]:not([revision~="33"]), body[showrevisionmarks="34"] span[revision]:not([revision~="34"]), body[showrevisionmarks="35"] span[revision]:not([revision~="35"]), body[showrevisionmarks="36"] span[revision]:not([revision~="36"]), body[showrevisionmarks="37"] span[revision]:not([revision~="37"]), body[showrevisionmarks="38"] span[revision]:not([revision~="38"]), body[showrevisionmarks="39"] span[revision]:not([revision~="39"]) {
+    background-color: inherit;
+}
+
+span[revision~="colour1"] {
+    background-color: rgb(160, 255, 255);
+}
+
+span[revision~="colour2"] {
+    background-color: rgb(255, 160, 255);
+}
+
+span[revision~="colour3"] {
+    background-color: rgb(255, 255, 160);
+}
+
+span[revision~="colour4"] {
+    background-color: rgb(160, 255, 160);
+}
+
+span[revision~="colour5"] {
+    background-color: rgb(255, 215, 0);
+}
+
+span[revision~="colour6"] {
+    background-color: rgb(255, 170, 105);
+}
+
+span[revision~="colour7"] {
+    background-color: rgb(255, 160, 160);
+}
+
+p.sceneheading:before {
+    display: none ! important;
+}
+
+p.sceneheading:after {
+    display: none ! important;
+}
+
+.softbreak {
+    display: none ! important;
+}
+
+body {
+    font-family: monospace; background-color: white;
+}
+
+@media screen {
+    .character[dual="true"] {
+        display: list-item; list-style-image: url(chrome://celtx/skin/dd.png);
+    }
+
+}
+
+p {
+}
+
+p.sceneheading, p.shot {
+    text-transform: uppercase;
+}
+
+p.character {
+    text-transform: uppercase; margin-bottom: 0em;
+}
+
+p.character:before {
+    content: counter(charcount, decimal) ". "; counter-increment: charcount; font-weight: bold; padding-right: 2em;
+}
+
+p.character + p.action, p.character + p.shot, p.character + p.transition, p.character + p.sceneheading {
+    margin-top: 1em;
+}
+
+p.parenthetical {
+    margin-bottom: 0em;
+}
+
+p.dialog {
+    margin-bottom: 0em;
+}
+
+p.dialog + p:not([class="parenthetical"]) {
+    margin-top: 1em;
+}
+
+p.transition {
+    text-align: right; text-transform: uppercase;
+}
+
+p.sceneheading[scenestr]:before {
+    display: block; margin-bottom: -1em;
+}
+
+p.sceneheading[scenestr]:after {
+    display: block; margin-top: -1em; text-align: right;
+}
+
+p.sceneheading[scenestr]:before, p.sceneheading[scenestr]:after {
+    content: attr(scenestr);
+}
+
+.softbreak:after, .hardbreak:after {
+    counter-increment: pages; content: counter(pages, decimal) "."; display: block; margin-top: 1em; margin-bottom: 1em; text-align: right;
+}
+
+@media screen {
+    p.sceneheading {
+        background-color: rgb(232, 232, 232);
+    }
+
+    p.sceneheading[omit="true"] {
+        background-color: rgb(96, 96, 96); color: white;
+    }
+
+    p.sceneheading[omit="true"]:before, p.sceneheading[omit="true"]:after {
+        color: black;
+    }
+
+    .softbreak {
+        border-top: 1px dashed black; width: 100%;
+    }
+
+    .hardbreak {
+        border-top: 1px solid black; width: 100%;
+    }
+
+    .firstpage, .firstpagespacer {
+        display: none;
+    }
+
+}
+
+@media print {
+    .softbreak, .hardbreak {
+        page-break-before: always;
+    }
+
+    .firstpage, .firstpagespacer {
+        height: 1em; margin-bottom: 1em;
+    }
+
+    .firstpage:after {
+        content: "1."; display: block; text-align: right;
+    }
+
+}
+
+@media print {
+    body {
+        margin: 0px; padding: 0px; font-size: 12pt;
+    }
+
+    p {
+        margin-left: 1.1875in; margin-right: 0.8125in;
+    }
+
+    p.character {
+        margin-left: 3.1875in;
+    }
+
+    p.parenthetical {
+        margin-left: 2.6875in; margin-right: 2.3125in;
+    }
+
+    p.dialog {
+        margin-left: 2.1875in; margin-right: 2.19in;
+    }
+
+    p.sceneheading:before {
+        margin-left: -0.75in;
+    }
+
+    p.sceneheading:after {
+        margin-right: -0.25in;
+    }
+
+    .softbreak:after, .hardbreak:after {
+        margin-right: 0.5625in;
+    }
+
+    .firstpage:after {
+        margin-right: 0.5625in;
+    }
+
+}
+
+@media screen {
+    body {
+    }
+
+    p {
+    }
+
+    p.character {
+        text-align:center;
+    }
+
+    p.parenthetical {
+        margin-left: 160px; margin-right: 160px;
+    }
+
+    p.dialog {
+        margin-left: 40px; margin-right: 40px;
+    }
+
+    p.sceneheading:before {
+        margin-left: -30px;
+    }
+
+    p.sceneheading:after {
+        margin-right: -40px;
+    }
+
+}
+
+.character:before, .sound:before, .music:before, .voice:before {
+    display: none ! important;
+}
